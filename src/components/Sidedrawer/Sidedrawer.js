@@ -1,15 +1,14 @@
 import React, { Fragment } from "react";
 import * as styles from "./Sidedrawer.module.scss";
 import { Link } from "react-router-dom";
-import clsx from "clsx";
 
+import NavList from "../NavList/NavList";
 import Logo from "../../assets/images/htg_logo.png";
 
 const Sidedrawer = (props) => {
   let menuWidth = 0;
   let overlayWidth = 0;
   let overlayOpacity = 0;
-  console.log(props.isOpen);
   if (props.isOpen) {
     menuWidth = "270px";
     overlayWidth = "100vw";
@@ -27,17 +26,7 @@ const Sidedrawer = (props) => {
         <div className={styles.title}>
           <img src={Logo} alt="Homestyle Gymnastics" />
         </div>
-        <div className={styles.list}>
-          <Link className={clsx(styles.listItem, styles.active)} to="/home">
-            Dashboard
-          </Link>
-          <Link className={styles.listItem} to="/account">
-            Account
-          </Link>
-          <Link className={styles.listItem} to="/">
-            Sign out
-          </Link>
-        </div>
+        <NavList navLinks={props.navLinks} toggleDrawer={props.toggleDrawer} />
       </div>
     </Fragment>
   );

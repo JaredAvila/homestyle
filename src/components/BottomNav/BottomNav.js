@@ -1,38 +1,48 @@
 import React from "react";
+import { withRouter } from "react-router";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import RestoreIcon from "@material-ui/icons/Restore";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
+import HomeIcon from "@material-ui/icons/Home";
+import DirectionsRunIcon from "@material-ui/icons/DirectionsRun";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import * as styles from "./BottomNav.module.scss";
 
-const BottomNav = () => {
+const BottomNav = (props) => {
   return (
     <BottomNavigation
       value="some value goes here eventually"
       onChange={(event, newValue) => {
-        console.log("good for you");
+        switch (newValue) {
+          case 0:
+            return props.history.push("/home");
+          case 1:
+            return props.history.push("/activities");
+          case 2:
+            return props.history.push("/account");
+          default:
+            return props.history.push("/");
+        }
       }}
       showLabels
       className={styles.bottomNav}
     >
       <BottomNavigationAction
         className={styles.icon}
-        label="Recents"
-        icon={<RestoreIcon />}
+        label="Home"
+        icon={<HomeIcon fontSize="large" />}
       />
       <BottomNavigationAction
         className={styles.icon}
-        label="Favorites"
-        icon={<FavoriteIcon />}
+        label="Actvities"
+        icon={<DirectionsRunIcon fontSize="large" />}
       />
       <BottomNavigationAction
         className={styles.icon}
-        label="Nearby"
-        icon={<LocationOnIcon />}
+        label="Account"
+        icon={<AccountCircleIcon fontSize="large" />}
       />
     </BottomNavigation>
   );
 };
 
-export default BottomNav;
+export default withRouter(BottomNav);
