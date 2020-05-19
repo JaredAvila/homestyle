@@ -1,0 +1,27 @@
+@import "../../constants//colors.scss";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $light-peach;
+}
+
+.menu {
+  margin-left: 20px;
+  color: $dark_blue !important;
+  font-size: 2.5rem !important;
+}
+
+.logo {
+  height: 35px;
+
+  img {
+    height: 100%;
+  }
+}
