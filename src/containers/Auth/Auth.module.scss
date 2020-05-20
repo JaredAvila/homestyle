@@ -28,7 +28,7 @@
   .title {
     position: absolute;
     font-size: 2.9rem;
-    color: $dark-blue;
+    color: $dark_blue;
     z-index: 1;
   }
 }
@@ -49,11 +49,11 @@
 
     label {
       margin-bottom: 5px;
-      color: $dark-gray;
+      color: $dark_gray;
     }
 
     input {
-      padding: 5px 10px;
+      padding: 5px;
       border: none;
       border-bottom: 1px solid $black;
       margin-bottom: 25px;
@@ -74,7 +74,7 @@
     p {
       text-align: center;
       a {
-        color: $dark-blue;
+        color: $dark_blue;
 
         &:hover,
         &:active,

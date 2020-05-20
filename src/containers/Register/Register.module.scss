@@ -1,0 +1,92 @@
+@import "../../constants/colors.scss";
+.container {
+  height: 100vh;
+  background-color: $primary;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  position: relative;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../assets/images/grass.jpg");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: auto;
+}
+
+.formContainer {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  width: 65%;
+  transform: translateX(-50%);
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.418);
+  border-radius: 3px;
+  padding: 20px;
+
+  .title {
+    color: $dark-blue;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    letter-spacing: 8px;
+  }
+
+  .spacer {
+    border-bottom: 2px solid $dark_blue;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .form {
+    display: flex;
+    flex-flow: column;
+
+    label {
+      margin-bottom: 5px;
+      color: $dark_gray;
+    }
+
+    input {
+      padding: 5px;
+      border: none;
+      border-bottom: 1px solid $black;
+      margin-bottom: 25px;
+      background-color: white;
+    }
+
+    input.button {
+      border-bottom: none;
+      padding: 10px 0;
+      background-color: $primary;
+      color: white;
+      font-size: 1.6rem;
+      border-radius: 3px;
+      width: 80%;
+      margin: auto;
+    }
+
+    p {
+      text-align: center;
+      a {
+        color: $dark_blue;
+
+        &:hover,
+        &:active,
+        &:visited {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
