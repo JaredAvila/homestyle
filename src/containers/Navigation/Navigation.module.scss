@@ -9,7 +9,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $light-peach;
+  background-color: white;
+  z-index: 100;
 }
 
 .menu {

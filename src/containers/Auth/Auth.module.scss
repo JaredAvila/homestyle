@@ -1,0 +1,102 @@
+@import "../../constants/colors.scss";
+.container {
+  height: 100vh;
+  background-color: $primary;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  position: relative;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../assets/images/grass.jpg");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: auto;
+
+  .logo {
+    height: 100px;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .title {
+    position: absolute;
+    font-size: 2.9rem;
+    color: $dark-blue;
+    z-index: 1;
+  }
+}
+
+.formContainer {
+  position: absolute;
+  top: 210px;
+  left: 50%;
+  width: 65%;
+  transform: translateX(-50%);
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.418);
+  border-radius: 3px;
+  padding: 20px;
+  .form {
+    display: flex;
+    flex-flow: column;
+
+    label {
+      margin-bottom: 5px;
+      color: $dark-gray;
+    }
+
+    input {
+      padding: 5px 10px;
+      border: none;
+      border-bottom: 1px solid $black;
+      margin-bottom: 25px;
+      background-color: white;
+    }
+
+    input.button {
+      border-bottom: none;
+      padding: 10px 0;
+      background-color: $primary;
+      color: white;
+      font-size: 1.6rem;
+      border-radius: 3px;
+      width: 80%;
+      margin: auto;
+    }
+
+    p {
+      text-align: center;
+      a {
+        color: $dark-blue;
+
+        &:hover,
+        &:active,
+        &:visited {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.register {
+  margin-bottom: 130px;
+  text-align: center;
+  color: $light_gray;
+
+  .regBtn {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: $dark-blue;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+}

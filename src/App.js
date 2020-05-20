@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Landing from "./containers/Landing/Landing";
 import Auth from "./containers/Auth/Auth";
 import Footer from "./components/Footer/Footer";
 import Navigation from "./containers/Navigation/Navigation";
@@ -21,8 +20,7 @@ const App = () => {
       <Navigation />
       <div style={{ paddingTop: "50px" }}>
         <Switch>
-          <Route path="/" exact component={Landing} />
-          <Route path="/auth" component={Auth} />
+          <Route path="/" exact component={Auth} />
           <Route path="/register" exact component={Register} />
           <Route path="/register/add_child" component={AddChild} />
           <Route path="/register/confirm" component={Confirm} />

@@ -4,7 +4,8 @@
   bottom: 0;
   left: 0;
   width: 100vw;
-  background-color: $light_blue !important;
+  background-color: $primary !important;
+  z-index: 100;
 }
 .icon {
   color: $white !important;
