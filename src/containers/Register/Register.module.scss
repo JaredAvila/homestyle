@@ -22,7 +22,7 @@
 
 .formContainer {
   position: absolute;
-  top: 80px;
+  top: 30px;
   left: 50%;
   width: 80%;
   transform: translateX(-50%);
@@ -51,7 +51,7 @@
       &:hover,
       &:active,
       &:visited {
-        color: $primary;
+        color: $light_blue;
       }
     }
   }

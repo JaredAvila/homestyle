@@ -60,11 +60,12 @@
   color: $light_gray;
 
   .regBtn {
-    background-color: white;
-    padding: 5px 10px;
-    border-radius: 3px;
-    color: $dark-blue;
-    text-decoration: none;
+    color: $light_blue;
     margin-left: 10px;
+
+    &:hover,
+    &:active {
+      color: white;
+    }
   }
 }

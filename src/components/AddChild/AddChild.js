@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { withRouter } from "react-router";
+import { Link, useHistory } from "react-router-dom";
 
 import CheckIcon from "@material-ui/icons/Check";
 
 import * as styles from "./AddChild.module.scss";
 import Form from "../Form/Form";
+import Button from "../Button/Button";
 
 const AddChild = (props) => {
   const [isAdded, setIsAdded] = useState(false);
   const [childName, setChildName] = useState("");
   const [childAge, setChildAge] = useState("");
+
+  let history = useHistory();
 
   const onNameChangeHandler = (e) => {
     setChildName(e.target.value);
@@ -58,9 +60,23 @@ const AddChild = (props) => {
     },
     {
       label: false,
+      buttonStyle: "add",
+      color: "lightBlueIcon",
       inputConfig: {
         value: "Add",
         type: "submit",
+      },
+    },
+    {
+      label: false,
+      click: () => {
+        history.goBack();
+      },
+      color: "darkPeachIcon",
+      buttonStyle: "back",
+      inputConfig: {
+        value: "Go Back",
+        type: "button",
       },
     },
   ];
@@ -72,11 +88,13 @@ const AddChild = (props) => {
       <p className={styles.addedText}>
         {isAdded ? "*Child has been added" : ""}
       </p>
-      <Link className={styles.button} to="/register/confirm">
-        Finshed <CheckIcon />
-      </Link>
+      <Button color="peach">
+        <Link className={styles.button} to="/register/confirm">
+          Finshed <CheckIcon />
+        </Link>
+      </Button>
     </div>
   );
 };
 
-export default withRouter(AddChild);
+export default AddChild;

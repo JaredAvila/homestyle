@@ -1,5 +1,11 @@
 @import "../../../constants/colors.scss";
 
+.inputContainer {
+  display: flex;
+  flex-flow: column;
+  width: 93%;
+}
+
 input.button {
   border-bottom: none !important;
   padding: 10px 0 !important;

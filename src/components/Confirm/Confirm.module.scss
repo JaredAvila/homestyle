@@ -2,10 +2,16 @@
 
 .confirm {
   background-color: $primary;
+  height: 100vh;
   padding: 20px;
   display: flex;
   flex-flow: column;
   align-items: center;
+
+  .infoText {
+    font-size: 2rem;
+    margin: 3px 0;
+  }
 
   .title {
     color: white;
@@ -13,35 +19,12 @@
     text-align: center;
   }
 
-  .formContainer {
-    width: 95%;
-  }
-
   .buttonContainer {
-    margin: 40px 0;
+    margin: 20px 0;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-  }
-
-  .button {
-    background-color: $light_peach;
-    padding: 10px 20px;
-    border-radius: 3px;
-    color: $black;
-    text-decoration: none;
-    font-size: 1.6rem;
-    margin: 0;
-  }
-
-  .buttonCancel {
-    background-color: $dark_gray;
-    padding: 10px 20px;
-    border-radius: 3px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.6rem;
   }
 }
 
@@ -49,10 +32,12 @@
   width: 100%;
 
   .childrenTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: $black;
     border-bottom: 4px double $black;
-    padding: 5px;
+    padding: 5px 10px;
+    margin: 0;
+    margin-bottom: 1em;
   }
 
   .children {
@@ -62,13 +47,19 @@
 
     .childContainer {
       background-color: $light_peach;
-      width: 150px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.171);
+      width: 135px;
       border-radius: 3px;
       margin-bottom: 5px;
+      padding: 10px 0;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
 
       p {
-        padding: 0 20px;
         font-size: 1.4rem;
+        margin: 5px 0;
 
         span {
           color: $primary;

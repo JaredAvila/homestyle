@@ -106,6 +106,7 @@ const Register = (props) => {
     },
     {
       label: false,
+      color: "darkPeach",
       inputConfig: {
         value: "Continue",
         type: "submit",
