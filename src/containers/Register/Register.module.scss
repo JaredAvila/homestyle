@@ -47,45 +47,15 @@
     margin: auto;
     margin-bottom: 20px;
   }
+  p {
+    text-align: center;
+    a {
+      color: $dark_blue;
 
-  .form {
-    display: flex;
-    flex-flow: column;
-
-    label {
-      margin-bottom: 5px;
-      color: $dark_gray;
-    }
-
-    input {
-      padding: 5px;
-      border: none;
-      border-bottom: 1px solid $black;
-      margin-bottom: 25px;
-      background-color: white;
-    }
-
-    input.button {
-      border-bottom: none;
-      padding: 10px 0;
-      background-color: $primary;
-      color: white;
-      font-size: 1.6rem;
-      border-radius: 3px;
-      width: 80%;
-      margin: auto;
-    }
-
-    p {
-      text-align: center;
-      a {
-        color: $dark_blue;
-
-        &:hover,
-        &:active,
-        &:visited {
-          color: $primary;
-        }
+      &:hover,
+      &:active,
+      &:visited {
+        color: $primary;
       }
     }
   }

@@ -3,8 +3,41 @@ import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/htg_logo-no-text.png";
 import * as styles from "./Auth.module.scss";
+import Form from "../../components/Form/Form";
 
 const Auth = (props) => {
+  const loginForm = [
+    {
+      label: "Email",
+      labelConfig: {
+        htmlFor: "email",
+      },
+      inputConfig: {
+        placeholder: "You@exapmle.com",
+        type: "email",
+        name: "email",
+      },
+    },
+    {
+      label: "Password",
+      labelConfig: {
+        htmlFor: "password",
+      },
+      inputConfig: {
+        placeholder: "Enter a password",
+        type: "password",
+        name: "password",
+      },
+    },
+    {
+      label: false,
+      inputConfig: {
+        value: "Log In",
+        type: "submit",
+      },
+    },
+  ];
+
   const onSubmitHandler = () => {
     props.history.push("/home");
   };
@@ -16,7 +49,8 @@ const Auth = (props) => {
         <img className={styles.logo} src={Logo} alt="Homestyle Gymnastics" />
       </div>
       <div className={styles.formContainer}>
-        <form onSubmit={onSubmitHandler} className={styles.form}>
+        <Form inputList={loginForm} onSubmit={onSubmitHandler} />
+        {/* <form onSubmit={onSubmitHandler} className={styles.form}>
           <label htmlFor="email">Email</label>
           <input type="text" placeholder="You@example.com" name="email" />
           <label htmlFor="password">Password</label>
@@ -26,10 +60,11 @@ const Auth = (props) => {
             name="password"
           />
           <input className={styles.button} type="submit" value="Sign In" />
-          <p>
-            <a href="/">Forgot username/password?</a>
-          </p>
-        </form>
+          
+        </form> */}
+        <p>
+          <a href="/">Forgot username/password?</a>
+        </p>
       </div>
       <p className={styles.register}>
         Don't have an account?{" "}
