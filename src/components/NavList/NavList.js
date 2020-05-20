@@ -10,6 +10,7 @@ const NavList = (props) => {
         if (link.active) {
           return (
             <Link
+              key={link.title}
               className={clsx(styles.listItem, styles.active)}
               to={link.url}
             >
@@ -18,24 +19,12 @@ const NavList = (props) => {
           );
         } else {
           return (
-            <Link className={styles.listItem} to={link.url}>
+            <Link key={link.title} className={styles.listItem} to={link.url}>
               {link.title}
             </Link>
           );
         }
       })}
-      {/* <Link className={clsx(styles.listItem, styles.active)} to="/home">
-        Dashboard
-      </Link>
-      <Link className={styles.listItem} to="/activities">
-        Activities
-      </Link>
-      <Link className={styles.listItem} to="/account">
-        Account
-      </Link>
-      <Link className={styles.listItem} to="/">
-        Sign out
-      </Link> */}
     </div>
   );
 };

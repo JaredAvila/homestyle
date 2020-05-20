@@ -8,9 +8,7 @@ const Input = (props) => {
       <input {...props.inputConfig} />
     </Fragment>
   );
-  console.log(props.label);
   if (!props.label) {
-    console.log("this should have worked");
     inputMarkup = <input {...props.inputConfig} className={styles.button} />;
   }
   return inputMarkup;

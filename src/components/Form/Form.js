@@ -8,7 +8,7 @@ const Form = (props) => {
       {props.inputList.map((item) => {
         return (
           <Input
-            key={item.key}
+            key={item.label}
             inputConfig={item.inputConfig}
             labelConfig={item.labelConfig}
             label={item.label}

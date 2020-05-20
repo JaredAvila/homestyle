@@ -1,0 +1,34 @@
+@import "../../constants/colors.scss";
+
+.addChild {
+  background-color: $primary;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  .title {
+    font-size: 2.5rem;
+    color: $dark_peach;
+  }
+
+  .addedText {
+    color: $light_blue;
+    font-size: 1.4rem;
+  }
+
+  .button {
+    background-color: $peach;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: $black;
+    border-radius: 3px;
+    transition: all 300ms ease;
+
+    &:hover,
+    &:active {
+      background-color: $light_peach;
+    }
+  }
+}

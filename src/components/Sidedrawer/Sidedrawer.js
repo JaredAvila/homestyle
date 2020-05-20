@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import * as styles from "./Sidedrawer.module.scss";
-import { Link } from "react-router-dom";
 
 import NavList from "../NavList/NavList";
 import Logo from "../../assets/images/htg_logo.png";

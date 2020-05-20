@@ -16,6 +16,7 @@ const Auth = (props) => {
         placeholder: "You@exapmle.com",
         type: "email",
         name: "email",
+        autoComplete: "username",
       },
     },
     {
@@ -27,6 +28,7 @@ const Auth = (props) => {
         placeholder: "Enter a password",
         type: "password",
         name: "password",
+        autoComplete: "current-password",
       },
     },
     {
@@ -50,18 +52,6 @@ const Auth = (props) => {
       </div>
       <div className={styles.formContainer}>
         <Form inputList={loginForm} onSubmit={onSubmitHandler} />
-        {/* <form onSubmit={onSubmitHandler} className={styles.form}>
-          <label htmlFor="email">Email</label>
-          <input type="text" placeholder="You@example.com" name="email" />
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            placeholder="Enter your password"
-            name="password"
-          />
-          <input className={styles.button} type="submit" value="Sign In" />
-          
-        </form> */}
         <p>
           <a href="/">Forgot username/password?</a>
         </p>

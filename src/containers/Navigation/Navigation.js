@@ -27,21 +27,7 @@ const Navigation = (props) => {
       }
     });
     setNavLinks(navLinks);
-  });
-
-  const updateNavLinksHandler = () => {
-    if (navLinks) {
-      const updatedLinks = navLinks.forEach((link) => {
-        console.log(link);
-        if (link.url === props.location.pathname) {
-          link.active = true;
-        } else {
-          link.active = false;
-        }
-      });
-      setNavLinks(updatedLinks);
-    }
-  };
+  }, [props.location.pathname, navLinks]);
 
   const toggleDrawerHandler = () => {
     setIsOpen((currentState) => (currentState ? false : true));

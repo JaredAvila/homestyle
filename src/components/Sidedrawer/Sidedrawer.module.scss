@@ -9,6 +9,7 @@
   background-color: black;
   opacity: 0.5;
   transition: opacity 0.2s;
+  z-index: 100;
 }
 
 .container {
@@ -20,6 +21,7 @@
   color: $dark_blue;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
   transition: width 0.3s ease-in-out;
+  z-index: 120;
 }
 
 .title {
