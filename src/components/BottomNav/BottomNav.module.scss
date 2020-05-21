@@ -1,0 +1,13 @@
+@import "../../constants/colors.scss";
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background-color: $primary !important;
+  z-index: 90;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.767);
+}
+.icon {
+  color: $white !important;
+}

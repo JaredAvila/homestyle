@@ -1,0 +1,71 @@
+@import "../../constants/colors.scss";
+.container {
+  height: 100vh;
+  background-color: $primary;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  position: relative;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../assets/images/grass.jpg");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: auto;
+
+  .logo {
+    height: 100px;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .title {
+    position: absolute;
+    font-size: 2.9rem;
+    color: $dark_blue;
+    z-index: 1;
+  }
+}
+
+.formContainer {
+  position: absolute;
+  top: 210px;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%);
+
+  p {
+    text-align: center;
+    a {
+      color: $dark_blue;
+
+      &:hover,
+      &:active,
+      &:visited {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.register {
+  margin-bottom: 130px;
+  text-align: center;
+  color: $light_gray;
+
+  .regBtn {
+    color: $light_blue;
+    margin-left: 10px;
+
+    &:hover,
+    &:active {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+@import "../../constants/colors.scss";
+
+/*                Buttons                              */
+
+.primary,
+.lightBlue,
+.darkBlue,
+.peach,
+.lightPeach,
+.darkPeach,
+.white,
+.button {
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  border: none;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 300ms ease;
+}
+
+.primary {
+  background-color: $primary;
+  color: whitesmoke;
+
+  &:hover,
+  &:active {
+    background-color: $light_peach;
+  }
+}
+
+.lightBlue {
+  background-color: $light_blue;
+  color: whitesmoke;
+
+  &:hover,
+  &:active {
+    background-color: $primary;
+  }
+}
+
+.darkBlue {
+  background-color: $dark_blue;
+  color: whitesmoke;
+
+  &:hover,
+  &:active {
+    background-color: $primary;
+  }
+}
+
+.peach {
+  background-color: $peach;
+  color: $black;
+
+  &:hover,
+  &:active {
+    background-color: $light_peach;
+  }
+}
+
+.lightPeach {
+  background-color: $light_peach;
+  color: $black;
+
+  &:hover,
+  &:active {
+    background-color: $peach;
+  }
+}
+
+.darkPeach {
+  background-color: $dark_peach;
+  color: $dark_gray;
+
+  &:hover,
+  &:active {
+    background-color: $peach;
+  }
+}
+
+.white {
+  background-color: white;
+  color: $dark_blue;
+
+  &:hover,
+  &:active {
+    background-color: whitesmoke;
+  }
+}
+
+/*                ICONS                                */
+.icon,
+.lightBlueIcon,
+.primaryIcon,
+.darkBlueIcon,
+.lightPeachIcon,
+.darkPeachIcon,
+.peachIcon {
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.lightBlueIcon {
+  color: $light_blue;
+  &:hover,
+  &:active {
+    color: $primary;
+  }
+}
+.primaryIcon {
+  color: $primary;
+  &:hover,
+  &:active {
+    color: $light_blue;
+  }
+}
+.darkBlueIcon {
+  color: $dark_blue;
+  &:hover,
+  &:active {
+    color: $primary;
+  }
+}
+.lightPeachIcon {
+  color: $light_peach;
+  &:hover,
+  &:active {
+    color: $peach;
+  }
+}
+.peachIcon {
+  color: $peach;
+  &:hover,
+  &:active {
+    color: $light_peach;
+  }
+}
+.darkPeachIcon {
+  color: $dark_peach;
+  &:hover,
+  &:active {
+    color: $peach;
+  }
+}
