@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import Card from "@material-ui/core/Card";
 import Avatar from "@material-ui/core/Avatar";
@@ -57,7 +57,6 @@ const Confirm = (props) => {
               Create Account
               <AddCircleOutlineIcon style={{ fontSize: 40 }} />
             </Button>
-            {/* <div className={styles.spacer}></div> */}
             <Button
               click={() => {
                 history.push("/register");

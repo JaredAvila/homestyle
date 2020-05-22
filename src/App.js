@@ -2,11 +2,11 @@ import React, { Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Auth from "./containers/Auth/Auth";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
 import Navigation from "./containers/Navigation/Navigation";
 import Home from "./containers/Home/Home";
 import Activities from "./containers/Activities/Activities";
-import Activity from "./components/Activity/Activity";
+import Activity from "./containers/Activity/Activity";
 import Completed from "./components/Completed/Completed";
 import AddChild from "./components/AddChild/AddChild";
 import Confirm from "./components/Confirm/Confirm";
@@ -33,7 +33,7 @@ const App = () => {
         </Switch>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </Fragment>
   );
 };

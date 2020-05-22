@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/images/htg_logo-no-text.png";
 import * as styles from "./Auth.module.scss";
 import Form from "../../components/Form/Form";
-import Button from "../../components/Button/Button";
 
 const Auth = (props) => {
   const loginForm = [
